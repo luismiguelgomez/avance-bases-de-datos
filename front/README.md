@@ -7,3 +7,5 @@ El boilerplate de esta interfaz se generó a partir de la plantilla de SolidJS +
 # Mockup Dashboard
 
 Elaborado en Figma, un dashboard que posteriormente será generado a través de PowerBI o alguna plataforma similar.
+
+<img src="./mockup-dash-pro.png">
