@@ -49,6 +49,15 @@
     U+FEFF, U+FFFD;
 }
 
+/* CSS HEX */
+.light {
+  --gainsboro: #e5e7ebff;
+  --mauve: #cdb1f7ff;
+  --amethyst: #9d60c1ff;
+  --eminence: #6b337dff;
+  --black: #000000ff;
+}
+
 @tailwind base;
 body {
   @apply bg-[#E5E7EB] text-center text-black;

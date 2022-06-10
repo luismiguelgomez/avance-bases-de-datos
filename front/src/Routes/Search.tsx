@@ -2,7 +2,7 @@ import '../App.css';
 import Nav from '../Components/Nav';
 import ProductList from '../Components/ProductList';
 
-const App = () => {
+const Search = () => {
   return (
     <div>
       <Nav />
@@ -11,4 +11,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default Search;

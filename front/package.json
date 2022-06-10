@@ -19,7 +19,8 @@
     "vite-plugin-solid": "^2.2.1"
   },
   "dependencies": {
-    "animol": "^1.0.12",
+    "@storeon/solidjs": "^3.0.1",
+    "fuse.js": "^6.6.2",
     "solid-app-router": "^0.3.3"
   }
 }

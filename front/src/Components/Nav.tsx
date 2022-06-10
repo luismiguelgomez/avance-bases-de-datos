@@ -1,7 +1,9 @@
 import logo from '../logo.svg';
-import BurgerIcom from '../Icoms/BurgerIcom';
+import BurgerMenu from '../Icoms/BurgerMenu';
+import SearchBar from './SearchBar';
+import Select from './Select';
 
-const ProductSimple = (props: any) => {
+const Nav = (props: any) => {
   return (
     <header>
       <div class="mx-auto flex max-w-7xl items-center justify-between p-4">
@@ -9,23 +11,15 @@ const ProductSimple = (props: any) => {
           id="routes"
           class="hidden items-center space-x-1 text-sm font-medium text-gray-800 md:flex"
         >
-          <a
-            href="#"
-            class="rounded bg-white px-3 py-2 transition hover:bg-gray-100"
-          >
-            Home
-          </a>
-          <input
-            type="text"
-            class="block w-full rounded-md border-gray-200 text-md transition focus:border-blue-600 focus:ring-blue-600 disabled:cursor-not-allowed disabled:bg-gray-200 disabled:opacity-75"
-          ></input>
+          <SearchBar />
+          <Select />
         </nav>
         <button class="flex appearance-none p-1 text-gray-500 md:hidden">
-          <BurgerIcom />
+          <BurgerMenu />
         </button>
         <div id="Logo" class="flex flex-row space-x-4 items-center">
-          <img src={logo} class="w-10" alt="logo" />
-          Samurai Buy
+          <img src={logo} class="w-10 hue-rotate-60" alt="logo" />
+          Solid Store
         </div>
         <nav
           id="account"
@@ -49,4 +43,4 @@ const ProductSimple = (props: any) => {
   );
 };
 
-export default ProductSimple;
+export default Nav;
