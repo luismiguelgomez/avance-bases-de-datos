@@ -16,6 +16,7 @@ public class CustomerController {
     CustomerService customerService;
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
+    @CrossOrigin(origins = "http://localhost:8084")
     public ResponseEntity<List<Customer>> getAllUsers() {
         return ResponseEntity
                 .status(HttpStatus.OK)
@@ -23,16 +24,19 @@ public class CustomerController {
     }
 
     @RequestMapping(value = "/", method = RequestMethod.POST)
+    @CrossOrigin(origins = "http://localhost:8084")
     public Customer registerUser(@RequestBody Customer user) {
       return customerService.register(user);
     }
 
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
+    @CrossOrigin(origins = "http://localhost:8084")
     Customer get(@PathVariable long id) {
         return customerService.get(id);
     }
 
     @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
+    @CrossOrigin(origins = "http://localhost:8084")
     void delete(@PathVariable long id) {
         // TODO: eliminar en la base de datos al usuario
         customerService.delete(id);

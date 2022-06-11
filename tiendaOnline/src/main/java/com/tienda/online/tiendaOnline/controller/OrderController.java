@@ -16,6 +16,7 @@ public class OrderController {
     OrderService orderService;
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
+    @CrossOrigin(origins = "http://localhost:8084")
     public ResponseEntity<List<Order>> getAllUsers() {
         return ResponseEntity
                 .status(HttpStatus.OK)
@@ -23,16 +24,19 @@ public class OrderController {
     }
 
     @RequestMapping(value = "/", method = RequestMethod.POST)
+    @CrossOrigin(origins = "http://localhost:8084")
     public Order registerUser(@RequestBody Order order) {
         return orderService.register(order);
     }
 
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
+    @CrossOrigin(origins = "http://localhost:8084")
     Order get(@PathVariable long id) {
         return orderService.get(id);
     }
 
     @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
+    @CrossOrigin(origins = "http://localhost:8084")
     void delete(@PathVariable long id) {
         orderService.delete(id);
     }

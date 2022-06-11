@@ -17,6 +17,7 @@ public class ProviderController {
     ProviderService providerService;
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
+    @CrossOrigin(origins = "http://localhost:8084")
     public ResponseEntity<List<Provider>> getAllProviders() {
         return ResponseEntity
                 .status(HttpStatus.OK)
@@ -24,16 +25,19 @@ public class ProviderController {
     }
 
     @RequestMapping(value = "/", method = RequestMethod.POST)
+    @CrossOrigin(origins = "http://localhost:8084")
     public Provider registerCustomer(@RequestBody Provider provider) {
         return providerService.register(provider);
     }
 
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
+    @CrossOrigin(origins = "http://localhost:8084")
     Provider get(@PathVariable long id) {
         return providerService.get(id);
     }
 
     @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
+    @CrossOrigin(origins = "http://localhost:8084")
     void delete(@PathVariable long id) {
         providerService.delete(id);
     }
